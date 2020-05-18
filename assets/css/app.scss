@@ -5,10 +5,20 @@
 @import '~@fortawesome/fontawesome-free/scss/regular';
 @import '~@fortawesome/fontawesome-free/scss/brands';
 
+/* Color */
+$primary: rgb(0, 150, 255);
+$secondary: rgb(48, 49, 50);
+
+/* Background */
+$bg-primary: rgb(246, 246, 246);
+$bg-secondary: rgb(255, 255, 255);
+
 /* Font */
 $main-font: 'Open Sans', sans-serif;
+$main-font-color-light: rgb(255, 255, 255);
+$main-font-color-dark: rgb(88, 89, 90);
 
 body {
-    background-color: lightgray;
+    background-color: $bg-primary;
     font-family: $main-font;
 }
