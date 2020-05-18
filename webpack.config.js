@@ -53,8 +53,14 @@ Encore
         config.corejs = 3;
     })
 
-    // enables Sass/SCSS support
+    // processes files ending in .scss or .sass
     .enableSassLoader()
+
+    // processes files ending in .less
+    .enableLessLoader()
+
+    // processes files ending in .styl
+    .enableStylusLoader()
 
     // uncomment if you use TypeScript
     //.enableTypeScriptLoader()
