@@ -17,8 +17,15 @@ class WildController extends AbstractController
      */
     public function show(string $slug = ''): Response
     {
+        if (empty($slug)) {
+            $serieTitle = "Aucune série sélectionnée, veuillez choisir une série";
+        } else {
+            $serieTitle = str_replace('-', ' ', $slug);
+            $serieTitle = ucwords($serieTitle);
+        }
+
         return $this->render('wild/show.html.twig', [
-            'slug' => $slug
+            'serieTitle' => $serieTitle
         ]);
     }
 }
