@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Program;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -9,11 +10,27 @@ use Symfony\Component\Routing\Annotation\Route;
 class WildController extends AbstractController
 {
     /**
+     * Show all rows from Program’s entity
+     *
      * @Route("/wild", name="wild_index")
+     * @return Response A response instance
      */
     public function index(): Response
     {
-        return $this->render('wild/index.html.twig');
+        $programs = $this->getDoctrine()
+            ->getRepository(Program::class)
+            ->findAll();
+
+        if (!$programs) {
+            throw $this->createNotFoundException(
+                'No program found in program\'s table.'
+            );
+        }
+
+        return $this->render(
+            'wild/index.html.twig',
+            ['programs' => $programs]
+        );
     }
 
     /**
