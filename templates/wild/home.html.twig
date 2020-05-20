@@ -14,4 +14,8 @@
     <a href="{{ path('wild_index') }}">
         Testing index() method from WildController to view all programs.
     </a>
+    <br>
+    <a href="{{ path('show_category', { 'categoryName': "horreur" }) }}">
+        Testing showByCategory() method from WildController to view all programs by category.
+    </a>
 {% endblock %}
