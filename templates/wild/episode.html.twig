@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Program{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="mt-0">Episode {{ episode.number }} : {{ episode.title }}</h1>
+                <br>
+                <p>{{ episode.synopsis }}</p>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <a href="{{ path('wild_index') }}">
+        Retour à l'accueil
+    </a>
+{% endblock %}
