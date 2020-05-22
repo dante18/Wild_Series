@@ -156,24 +156,16 @@ class WildController extends AbstractController
      * Getting episodes with an Id
      *
      * @Route("/episode/{id}", requirements={"id"="^[0-9]+$"}, defaults={"id"=null}, name="show_episode")
-     * @param int $id
+     * @param Episode $episode
      * @return Response A season
      */
-    public function showByEpisode(int $id): Response
+    public function showEpisode(Episode $episode): Response
     {
-        if (!$id) {
-            throw $this->createNotFoundException('No id has been sent to find seasons in season\'s table');
-        }
-
-        $episode = $this->getDoctrine()->getRepository(Episode::class)->findOneBy([
-            'id' => $id
-        ]);
-
-        if (!$episode) {
-            throw $this->createNotFoundException('No episode with ' . $id . ' id, found in episode\'s table.');
-        }
+        $season = $this->getDoctrine()->getRepository(Season::class)->find($episode->getSeason());
 
         return $this->render('wild/episode.html.twig', [
+            'program' => $season->getProgram(),
+            'season' => $episode->getSeason(),
             'episode' => $episode,
         ]);
     }

@@ -6,7 +6,9 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="mt-0">Episode {{ episode.number }} : {{ episode.title }}</h1>
+                <h1 class="mt-0">{{ program.title }}</h1>
+                <br>
+                <p>Episode {{ episode.number }} : {{ episode.title }}</p>
                 <br>
                 <p>{{ episode.synopsis }}</p>
                 <br>
@@ -14,6 +16,14 @@
         </div>
     </div>
 
+    <a href="{{ path('show_program', { 'programName': program.title|replace({' ': "-"})|lower }) }}">
+        Page de présentation de la série
+    </a>
+    <br>
+    <a href="{{ path('show_season', { 'id': season.number }) }}">
+        Page de présentation de la saison {{ season.number }}
+    </a>
+    <br>
     <a href="{{ path('wild_index') }}">
         Retour à l'accueil
     </a>
