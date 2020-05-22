@@ -15,4 +15,12 @@ class CategoryController extends AbstractController
     {
         return $this->render('category/index.html.twig');
     }
+
+    /**
+     * @Route("/category/add", name="category_add")
+     */
+    public function add() :Response
+    {
+        return $this->render('category/add.html.twig');
+    }
 }
