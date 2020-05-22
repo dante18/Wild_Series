@@ -16,7 +16,11 @@ class CategoryController extends AbstractController
      */
     public function index() :Response
     {
-        return $this->render('category/index.html.twig');
+        $categories = $this->getDoctrine()->getRepository(Category::class)->findAll();
+
+        return $this->render('category/index.html.twig', [
+            'categories' => $categories
+        ]);
     }
 
     /**
@@ -39,7 +43,7 @@ class CategoryController extends AbstractController
             $entityManager->persist($data);
             $entityManager->flush();
 
-            return $this->redirectToRoute('category_add');
+            return $this->redirectToRoute('category_index');
         }
 
         return $this->render('category/add.html.twig', [
