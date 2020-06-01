@@ -3,3 +3,6 @@
 
 ## Quetes 12
 [Regarder la vidéo](https://www.loom.com/share/79609ea99409404e8d8f325e224e7b04)
+
+## Quetes 13
+[Regarder la vidéo](https://www.loom.com/share/ac27a79dbfa04b4fa3fac18097eeaefe)
