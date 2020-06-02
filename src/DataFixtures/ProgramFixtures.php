@@ -56,6 +56,7 @@ class ProgramFixtures extends Fixture
             $program->setSummary($data['summary']);
             $manager->persist($program);
             $this->addReference('program_' . $i, $program);
+            $program->setCategory($this->getReference($data['category']));
             $i++;
         }
 
