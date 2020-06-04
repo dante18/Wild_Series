@@ -12,3 +12,6 @@
 
 ## Quetes 16
 [Regarder la vidéo](https://www.loom.com/share/f6c96a0d49ae42dca5509eff8c2c8584)
+
+## Quetes 17
+[Regarder la vidéo](https://www.loom.com/share/cec17f53883f4c8e893c7b35cec868e6)
