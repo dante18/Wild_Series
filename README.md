@@ -18,3 +18,6 @@
 
 ## Quetes 18
 [Regarder la vidéo](https://www.loom.com/share/4cfe726325a44aa5a82d2046e7d19b26)
+
+## Quetes 19
+[Regarder la vidéo](https://www.loom.com/share/1cac1cf461db49598bd0584c022ff1d6)
