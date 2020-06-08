@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1>Nouvelle série !!</h1>
+    <p>La série <strong>{{ program.title }}</strong> vient d'être ajoutée</p>
+    <p><img src="{{program.poster}}" alt="poster"></p>
+    <p>
+        Tu peux la voir immédiatement en <a href="{{ url('program_show', {'slug': program.slug}) }}">cliquant ici</a>
+    </p>
+    <h2>Catégorie : <em><u>{{ program.category.name }}</u></em></h2>
+    <p>
+        Voici le résumé de la nouvelle série :<br><br>
+        {{ program.summary }}
+    </p>
+    <h2>Acteurs :</h2>
+    <ul>
+        {% for actor in program.actors %}
+            <li>{{ actor.name }}</li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>
