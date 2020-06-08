@@ -9,6 +9,12 @@
         <div class="navbar-nav">
             <a class="nav-item nav-link active" href="{{ path('app_index') }}">Accueil</a>
             <a class="nav-item nav-link active" href="{{ path('wild_index') }}">Serie</a>
+            {% if app.user %}
+                {{ app.user.email }}
+                <a href="{{ path('app_logout') }}"> Se déconnecter</a>
+            {% else %}
+                <a href="{{ path('app_login') }}"> Se connecter</a>
+            {% endif %}
         </div>
     </div>
 </nav>
