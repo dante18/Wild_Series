@@ -2,20 +2,29 @@
 
 namespace App\Controller;
 
-use App\Entity\Category;
-use App\Entity\Episode;
+use App\Entity\Comment;
 use App\Entity\Program;
+use App\Entity\Category;
 use App\Entity\Season;
+use App\Entity\Episode;
+use App\Entity\User;
+use App\Form\CommentType;
+use App\Form\CategoryType;
+use App\Repository\CommentRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+/**
+ * @Route("/wild")
+ */
 class WildController extends AbstractController
 {
     /**
      * Show all rows from Program’s entity
      *
-     * @Route("/wild", name="wild_index")
+     * @Route("/", name="wild_index")
      * @return Response A response instance
      */
     public function index(): Response
@@ -155,26 +164,41 @@ class WildController extends AbstractController
     /**
      * Getting episodes with an Id
      *
-     * @Route("/episode/{id}", requirements={"id"="^[0-9]+$"}, defaults={"id"=null}, name="show_episode")
-     * @param int $id
+     * @Route("/episode/{id}", name="show_episode")
+     * @param Episode $episode
+     * @param Request $request
+     * @param CommentRepository $commentRepository
      * @return Response A season
      */
-    public function showByEpisode(int $id): Response
+    public function showByEpisode(Episode $episode, Request $request, CommentRepository $commentRepository): Response
     {
-        if (!$id) {
-            throw $this->createNotFoundException('No id has been sent to find seasons in season\'s table');
-        }
+        $comment = new Comment();
+        $comments = $commentRepository->findBy(
+            ['episode' => $episode->getId()],
+            ['id' => 'ASC']
+        );
+        $form = $this->createForm(CommentType::class);
+        $form->handleRequest($request);
 
-        $episode = $this->getDoctrine()->getRepository(Episode::class)->findOneBy([
-            'id' => $id
-        ]);
-
-        if (!$episode) {
-            throw $this->createNotFoundException('No episode with ' . $id . ' id, found in episode\'s table.');
+        if ($form->isSubmitted() && $form->isValid()) {
+            $commentPost = $form->getData();
+            $user = $this->getUser();
+            $entityManager = $this->getDoctrine()->getManager();
+            $comment->setAuthor($user);
+            $comment->setEpisode($episode);
+            $comment->setComment($commentPost->getComment());
+            $comment->setRate($commentPost->getRate());
+            $entityManager->persist($comment);
+            $entityManager->flush();
+            return $this->redirectToRoute('show_episode', [
+                'id' => $episode->getId(),
+            ]);
         }
 
         return $this->render('wild/episode.html.twig', [
             'episode' => $episode,
+            'comments' => $comments,
+            'form' => $form->createView(),
         ]);
     }
 }

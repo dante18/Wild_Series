@@ -12,6 +12,39 @@
                 <br>
             </div>
         </div>
+        <div class="row">
+            <div class="col-12">
+                {% if app.user %}
+                    <div class="mx-auto mt-5 w-50 h-75">
+                        <h2> Laisser un commentaire </h2>
+
+                        {{ form_start(form) }}
+                        <h5 class="mt-4">Commentaire :</h5>
+                        {{ form_widget(form.comment) }}
+                        <h5 class="mt-4">Note :</h5>
+                        {{ form_widget(form.rate) }}
+                        <div class="text-right">
+                            <button class="btn round btn-lg mt-3 text-center">{{ button_label|default('Valider') }}</button>
+                        </div>
+                        {{ form_end(form) }}
+                    </div>
+                {% else %}
+                    <p>Vous devez être connecté.</p>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <h2>Commentaires :</h2>
+                {% for comment in comments %}
+                    <div class="card my-3">
+                        <p><em>De : {{ comment.author.name }} | Note : {{ comment.rate }}</em></p>
+                        <p>{{ comment.comment }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 
     <a href="{{ path('wild_index') }}">
