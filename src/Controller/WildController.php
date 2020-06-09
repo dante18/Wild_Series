@@ -198,6 +198,7 @@ class WildController extends AbstractController
         return $this->render('wild/episode.html.twig', [
             'episode' => $episode,
             'comments' => $comments,
+            'user' => $this->getUser(),
             'form' => $form->createView(),
         ]);
     }

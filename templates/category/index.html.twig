@@ -1,0 +1,25 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    Category
+{% endblock %}
+
+{% block body %}
+    <h1>Gestion des categories</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <ul>
+                    {% for category in categories %}
+                        <li>{{ category.name }}</li>
+                    {% endfor %}
+                    <ul>
+            </div>
+        </div>
+    </div>
+
+    <a href="{{ path('category_add') }}">
+        Testing add() method from CategoryController.
+    </a>
+{% endblock %}

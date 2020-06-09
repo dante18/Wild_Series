@@ -40,7 +40,18 @@
                 {% for comment in comments %}
                     <div class="card my-3">
                         <p><em>De : {{ comment.author.name }} | Note : {{ comment.rate }}</em></p>
+                        <p>
+                            {% for i in 1..comment.rate %}
+                                <i class="fas fa-star text-warning"></i>
+                            {% endfor %}
+                        </p>
                         <p>{{ comment.comment }}</p>
+                        {% if is_granted('ROLE_SUBSCRIBER') %}
+                            {% if comment.author.id == user.id %}
+                                {{ include('comment/_delete_form.html.twig') }}
+                            {% endif %}
+                        {% endif %}
+                        <hr>
                     </div>
                 {% endfor %}
             </div>
