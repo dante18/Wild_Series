@@ -21,3 +21,6 @@
 
 ## Quetes 19
 [Regarder la vidéo](https://www.loom.com/share/1cac1cf461db49598bd0584c022ff1d6)
+
+## Quetes 20
+[Regarder la vidéo](https://www.loom.com/share/33ea125a5dec49419560bfa69139d814)
