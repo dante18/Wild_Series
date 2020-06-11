@@ -45,6 +45,7 @@ class SecurityController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             // encode the plain password
+            $user->setRoles(["ROLE_SUBSCRIBER"]);
             $user->setPassword(
                 $passwordEncoder->encodePassword(
                     $user,
@@ -69,6 +70,14 @@ class SecurityController extends AbstractController
         return $this->render('security/register.html.twig', [
             'registrationForm' => $form->createView(),
         ]);
+    }
+
+    /**
+     * @Route("/my-profile", name="app_profile")
+     */
+    public function showProfile()
+    {
+        return $this->render('security/profile.html.twig');
     }
 
     /**
