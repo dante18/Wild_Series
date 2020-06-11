@@ -8,12 +8,27 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <a class="nav-item nav-link active" href="{{ path('app_index') }}">Accueil</a>
-            <a class="nav-item nav-link active" href="{{ path('wild_index') }}">Serie</a>
-            {% if app.user %}
-                {{ app.user.email }}
-                <a href="{{ path('app_logout') }}"> Se déconnecter</a>
+            {% if is_granted('ROLE_ADMIN') %}
+                <a class="nav-item nav-link" href="{{ path('program_index') }}">Séries-admin</a>
+                <a class="nav-item nav-link" href="{{ path('season_index') }}">Saisons-admin</a>
+                <a class="nav-item nav-link" href="{{ path('episode_index') }}">Episodes-admin</a>
+                <a class="nav-item nav-link" href="{{ path('category_index') }}">Catégories-admin</a>
+                <a class="nav-item nav-link" href="{{ path('actor_index') }}">Acteurs-admin</a>
             {% else %}
-                <a href="{{ path('app_login') }}"> Se connecter</a>
+                <a class="nav-item nav-link" href="{{ path('wild_index') }}">Séries</a>
+            {% endif %}
+            {% if app.user %}
+                <a href="{{ path('app_profile') }}" class="nav-item nav-link"><h6>Mon compte</h6></a>
+                <a href="{{ path('app_logout') }}" class="nav-item nav-link">
+                    <h6>Se déconnecter</h6>
+                </a>
+            {% else %}
+                <a href="{{ path('app_register') }}" class="nav-item nav-link">
+                    <h6>S'inscrire</h6>
+                </a>
+                <a href="{{ path('app_login') }}" class="nav-item nav-link">
+                    <h6>Se connecter</h6>
+                </a>
             {% endif %}
         </div>
     </div>
