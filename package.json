@@ -11,7 +11,8 @@
         "sass-loader": "^7.0.1",
         "stylus": "^0.54.7",
         "stylus-loader": "^3.0.2",
-        "webpack-notifier": "^1.6.0"
+        "webpack-notifier": "^1.6.0",
+        "websocket-extensions": "^0.1.4"
     },
     "license": "UNLICENSED",
     "private": true,
