@@ -30,3 +30,6 @@
 
 ## Quetes 22
 [Regarder la vidéo](https://www.loom.com/share/bc5fb82574ec47ef987a7c8382cbc164)
+
+## Quetes 23
+[Regarder la vidéo](https://www.loom.com/share/bba00dc761f94ebfb60f071be89f45e8)
