@@ -18,18 +18,31 @@
                 <a class="nav-item nav-link" href="{{ path('wild_index') }}">Séries</a>
             {% endif %}
             {% if app.user %}
+                {% trans with {'%username%': app.user.email} %}
+                    hello_username
+                {% endtrans %} !
                 <a href="{{ path('app_profile') }}" class="nav-item nav-link"><h6>Mon compte</h6></a>
                 <a href="{{ path('app_logout') }}" class="nav-item nav-link">
-                    <h6>Se déconnecter</h6>
+                    <h6>{{ 'account.logout'|trans }}</h6>
                 </a>
             {% else %}
                 <a href="{{ path('app_register') }}" class="nav-item nav-link">
                     <h6>S'inscrire</h6>
                 </a>
                 <a href="{{ path('app_login') }}" class="nav-item nav-link">
-                    <h6>Se connecter</h6>
+                    <h6>{{ 'account.login'|trans }}</h6>
                 </a>
             {% endif %}
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Language
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="/fr/"><span class="flag-icon flag-icon-fr pr-2"></span> Francais</a>
+                    <a class="dropdown-item" href="/en/"><span class="flag-icon flag-icon-gb pr-2"></span> Englais</a>
+                    <a class="dropdown-item" href="/es/"><span class="flag-icon flag-icon-es pr-2"></span> Espagnole</a>
+                </div>
+            </div>
         </div>
     </div>
 </nav>
