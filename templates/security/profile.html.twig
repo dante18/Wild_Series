@@ -13,5 +13,11 @@
             <div class="col-4">Mail</div>
             <div class="col-8">{{ app.user.email }}</div>
         </div>
+        <h3>Vos favoris</h3>
+        {% for program in user.programs %}
+            <ul>{{ program.title }}</ul>
+        {% else %}
+            <p>Vous n'avez pas de séries en favoris.</p>
+        {% endfor %}
     </div>
 {% endblock %}

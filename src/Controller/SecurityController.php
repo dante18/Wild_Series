@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Guard\GuardAuthenticatorHandler;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
@@ -74,10 +75,14 @@ class SecurityController extends AbstractController
 
     /**
      * @Route("/my-profile", name="app_profile")
+     * @param UserInterface $user
+     * @return Response
      */
-    public function showProfile()
+    public function showProfile(UserInterface $user)
     {
-        return $this->render('security/profile.html.twig');
+        return $this->render('security/profile.html.twig', [
+            'user' => $user
+        ]);
     }
 
     /**
