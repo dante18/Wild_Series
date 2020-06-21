@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Program{% endblock %}
+{% block title %}{{ 'page.serieAdminShow'|trans }}{% endblock %}
 
 {% block body %}
-    <h1>Program</h1>
+    <h1>{{ 'page.serieAdminShowTitle'|trans }}</h1>
 
     <table class="table">
         <tbody>
@@ -12,35 +12,35 @@
                 <td>{{ program.id }}</td>
             </tr>
             <tr>
-                <th>Title</th>
+                <th>{{ 'word.title'|trans }}</th>
                 <td>{{ program.title }}</td>
                 <i id="watchlist-{{ program.id }}" class="{{ app.user.isInWatchlist(program) ? 'fas' : 'far' }} fa-heart watchlist" style="color: blue" data-href="{{path('program_watchlist', {'id': program.id})}}"></i>
             </tr>
             <tr>
-                <th>Summary</th>
+                <th>{{ 'word.summary'|trans }}</th>
                 <td>{{ program.summary }}</td>
             </tr>
             <tr>
-                <th>Poster</th>
+                <th>{{ 'word.poster'|trans }}</th>
                 <td>{{ program.poster }}</td>
             </tr>
         </tbody>
     </table>
 
-    <strong>Acteur :</strong>
+    <strong>{{ 'word.actor'|trans }} :</strong>
     <ul>
         {% for actor in program.actors %}
             <li>
                 <a href="/actor/{{ actor.slug }}">{{ actor.name }}</a>
             </li>
         {% else %}
-            <li>Aucun acteur pour cette série</li>
+            <li>{{ 'page.serieAdminListActorShow'|trans }}</li>
         {% endfor %}
     </ul>
 
-    <a href="{{ path('program_index') }}">back to list</a>
+    <a href="{{ path('program_index') }}">{{ 'page.serieAdminReturnButton'|trans }}</a>
 
-    <a href="{{ path('program_edit', {'slug': program.slug}) }}">edit</a>
+    <a href="{{ path('program_edit', {'slug': program.slug}) }}">{{ 'list.edit'|trans }}</a>
 
     {{ include('program/_delete_form.html.twig') }}
 

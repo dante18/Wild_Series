@@ -1,11 +1,11 @@
 {% extends "base.html.twig" %}
 
 {% block title %}
-    Category
+    {{ 'page.categoryAdmin'|trans }}
 {% endblock %}
 
 {% block body %}
-    <h1>Gestion des categories</h1>
+    <h1>{{ 'page.categoryAdminTitle'|trans }}</h1>
 
     <div class="container">
         <div class="row">
@@ -14,12 +14,10 @@
                     {% for category in categories %}
                         <li>{{ category.name }}</li>
                     {% endfor %}
-                    <ul>
+                </ul>
             </div>
         </div>
     </div>
 
-    <a href="{{ path('category_add') }}">
-        Testing add() method from CategoryController.
-    </a>
+    <a href="{{ path('category_add') }}">{{ 'page.categoryAdminCreateButton'|trans }}</a>
 {% endblock %}

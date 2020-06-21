@@ -1,19 +1,19 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Program index{% endblock %}
+{% block title %}{{ 'page.serieAdmin'|trans }}{% endblock %}
 
 {% block body %}
-    <h1>Program index</h1>
+    <h1>{{ 'page.serieAdminTitle'|trans }}</h1>
 
     <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Title</th>
-                <th>Summary</th>
-                <th>Poster</th>
-                <th>Actors</th>
-                <th>actions</th>
+                <th>{{ 'word.title'|trans }}</th>
+                <th>{{ 'word.summary'|trans }}</th>
+                <th>{{ 'word.poster'|trans }}</th>
+                <th>{{ 'word.actor'|trans }}</th>
+                <th>{{ 'word.actions'|trans }}</th>
             </tr>
         </thead>
         <tbody>
@@ -27,13 +27,13 @@
                     {% for actor in program.actors %}
                         {{ actor.name }},
                     {% else %}
-                        Aucun acteur pour cette série
+                        {{ 'page.serieAdminMessageListActor'|trans }}
                     {% endfor %}
                 </td>
                 <td>
-                    <a href="{{ path('program_show', {'slug': program.slug}) }}">show</a>
+                    <a href="{{ path('program_show', {'slug': program.slug}) }}">{{ 'list.show'|trans }}</a>
                     {% if is_granted('ROLE_ADMIN') %}
-                        <a href="{{ path('program_edit', {'slug': program.slug}) }}">edit</a>
+                        <a href="{{ path('program_edit', {'slug': program.slug}) }}">{{ 'list.edit'|trans }}</a>
                     {%endif%}
                     <i id="watchlist-{{ program.id }}"
                        class="{{ app.user.isInWatchlist(program) ? 'fas' : 'far' }} fa-heart watchlist"
@@ -43,13 +43,13 @@
             </tr>
         {% else %}
             <tr>
-                <td colspan="5">no records found</td>
+                <td colspan="5">{{ 'page.serieAdminMessageListSerie'|trans }}</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('program_new') }}">Create new</a>
+    <a href="{{ path('program_new') }}">{{ 'page.serieAdminCreateButton'|trans }}</a>
     {% block javascripts %}
         {{ encore_entry_script_tags('watchlist') }}
         {{ encore_entry_script_tags('app') }}

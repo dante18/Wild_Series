@@ -1,11 +1,11 @@
 {% extends "base.html.twig" %}
 
 {% block title %}
-    Home
+    {{ 'page.home'|trans }}
 {% endblock %}
 
 {% block body %}
-    <h1>Bienvenue sur Wild Series</h1>
+    <h1>{{ 'page.homeMessage'|trans }}</h1>
 
     <a href="{{ path('wild_show', { 'slug': "walking-dead" }) }}">
         Testing show() method from WildController with a real program s slug.
@@ -34,13 +34,13 @@
                         <img class="align-self-center mt-2 h-25 rounded img-fluid poster" src="{{ program.poster }}"
                              alt="{{ program.title }}">
                         <div class="card-body">
-                            <p>Catégorie : {{ program.category.name }}</p>
+                            <p>{{ 'page.homeCardCategory'|trans }} : {{ program.category.name }}</p>
                             <p class="card-text">{{ program.summary }}</p>
                         </div>
                     </div>
                 </div>
             {% else %}
-                Aucune série trouvée.
+                {{ 'page.homeListMessage'|trans }}
             {% endfor %}
         </div>
     </div>
