@@ -1,0 +1,12 @@
+version: 1.0
+publish: app
+services:
+  app:
+    environment:
+      DATABASE_URL: mysql://db_user:db_password@127.0.0.1:3306/db_name?serverVersion=5.7
+    build:
+      type: dockerfile
+      config: ./.runme/Dockerfile
+    ports:
+      - container: 8000
+        public: 80
