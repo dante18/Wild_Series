@@ -1,0 +1,15 @@
+version: 1.0
+publish: app
+services:
+  app:
+    environment:
+      DATABASE_URL: mysql://demo:demo@127.0.0.1:3306/wild_series
+    build:
+      type: dockerfile
+      config: ./.runme/Dockerfile
+    ports:
+      - container: 8000
+        public: 80
+  service_1:
+    command: ""
+    image: mysql:5.5
