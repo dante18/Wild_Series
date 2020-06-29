@@ -1,16 +1,16 @@
 {% extends "base.html.twig" %}
 
 {% block title %}
-    Category_Add
+    {{ 'page.categoryAdminNew'|trans }}
 {% endblock %}
 
 {% block body %}
-    <h1>Ajout d'une categorie</h1>
+    <h1>{{ 'page.categoryAdminNewTitle'|trans }}</h1>
 
     <div class="container">
         {{ form_start(form) }}
         {{ form_row(form.name) }}
-        <button class="btn">{{ button_label|default('Save') }}</button>
+        <button class="btn">{{ button_label|default('page.adminSaveButton'|trans) }}</button>
         {{ form_end(form) }}
     </div>
 {% endblock %}

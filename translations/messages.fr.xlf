@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="CDjx2ju" resname="hello_username">
+        <source>hello_username</source>
+        <target>Bonjour %username%</target>
+      </trans-unit>
+      <trans-unit id="Q7UTU9q" resname="account.logout">
+        <source>account.logout</source>
+        <target>Se déconnecter</target>
+      </trans-unit>
+      <trans-unit id="E_t5j6Q" resname="account.login">
+        <source>account.login</source>
+        <target>Se connecter</target>
+      </trans-unit>
+      <trans-unit id="Mkt7e3B" resname="page.home">
+        <source>page.home</source>
+        <target>Accueil</target>
+      </trans-unit>
+      <trans-unit id="rgIMvff" resname="page.serieAdmin">
+        <source>page.serieAdmin</source>
+        <target>Séries-Admin</target>
+      </trans-unit>
+      <trans-unit id="RY.TfIp" resname="page.seasonAdmin">
+        <source>page.seasonAdmin</source>
+        <target>Saisons-Admin</target>
+      </trans-unit>
+      <trans-unit id="y_ZYPVA" resname="page.episodeAdmin">
+        <source>page.episodeAdmin</source>
+        <target>Episodes-Admin</target>
+      </trans-unit>
+      <trans-unit id="rn_1u_5" resname="page.categoryAdmin">
+        <source>page.categoryAdmin</source>
+        <target>Catégories-Admin</target>
+      </trans-unit>
+      <trans-unit id="tLgJfAD" resname="page.actorAdmin">
+        <source>page.actorAdmin</source>
+        <target>Acteurs-Admin</target>
+      </trans-unit>
+      <trans-unit id="ZYMtzEQ" resname="page.serie">
+        <source>page.serie</source>
+        <target>Séries</target>
+      </trans-unit>
+      <trans-unit id="W9yniTz" resname="page.profile">
+        <source>page.profile</source>
+        <target>Mon compte</target>
+      </trans-unit>
+      <trans-unit id="U1doKCM" resname="account.register">
+        <source>account.register</source>
+        <target>S'enregistrer</target>
+      </trans-unit>
+      <trans-unit id="U_0FU49" resname="language.selected">
+        <source>language.selected</source>
+        <target>Modifier la langue du site</target>
+      </trans-unit>
+      <trans-unit id="0wIon7G" resname="language.fr">
+        <source>language.fr</source>
+        <target>Français</target>
+      </trans-unit>
+      <trans-unit id="GF8cHpg" resname="language.en">
+        <source>language.en</source>
+        <target>Englais</target>
+      </trans-unit>
+      <trans-unit id="75KepRC" resname="language.es">
+        <source>language.es</source>
+        <target>Espagnol</target>
+      </trans-unit>
+      <trans-unit id="seP7tS4" resname="page.serieTitle">
+        <source>page.serieTitle</source>
+        <target>Liste des séries</target>
+      </trans-unit>
+      <trans-unit id="pNszgcs" resname="page.serieListMessage">
+        <source>page.serieListMessage</source>
+        <target>Aucune série disponible</target>
+      </trans-unit>
+      <trans-unit id="m4hCO_X" resname="page.serieReturnButton">
+        <source>page.serieReturnButton</source>
+        <target>Retourner sur la page d'accueil</target>
+      </trans-unit>
+      <trans-unit id="mIDTAyp" resname="page.homeMessage">
+        <source>page.homeMessage</source>
+        <target>Bienvenue sur le site Wild Series</target>
+      </trans-unit>
+      <trans-unit id="JVjQ0TW" resname="page.homeCardCategory">
+        <source>page.homeCardCategory</source>
+        <target>Catégorie</target>
+      </trans-unit>
+      <trans-unit id="TV5UGhs" resname="page.homeListMessage">
+        <source>page.homeListMessage</source>
+        <target>Aucune série trouvée</target>
+      </trans-unit>
+      <trans-unit id="Etafpic" resname="list.show">
+        <source>list.show</source>
+        <target>Consulter</target>
+      </trans-unit>
+      <trans-unit id="FI0Hct7" resname="list.edit">
+        <source>list.edit</source>
+        <target>Modifier</target>
+      </trans-unit>
+      <trans-unit id="KSXDTNb" resname="word.title">
+        <source>word.title</source>
+        <target>Titre</target>
+      </trans-unit>
+      <trans-unit id="l27as0e" resname="page.actorAdminTitle">
+        <source>page.actorAdminTitle</source>
+        <target>Liste des acteurs</target>
+      </trans-unit>
+      <trans-unit id="yygRV59" resname="word.name">
+        <source>word.name</source>
+        <target>Nom</target>
+      </trans-unit>
+      <trans-unit id="682Vs8w" resname="word.actions">
+        <source>word.actions</source>
+        <target>Action(s)</target>
+      </trans-unit>
+      <trans-unit id="DGCRHGN" resname="page.actorAdminCreateButton">
+        <source>page.actorAdminCreateButton</source>
+        <target>Ajouter un nouvel acteur</target>
+      </trans-unit>
+      <trans-unit id="RQ9sOKD" resname="page.serieAdminEdit">
+        <source>page.serieAdminEdit</source>
+        <target>serie-Admin | Modifier</target>
+      </trans-unit>
+      <trans-unit id="V.4fWpj" resname="page.serieAdminEditTitle">
+        <source>page.serieAdminEditTitle</source>
+        <target>Modifier une série</target>
+      </trans-unit>
+      <trans-unit id="8EZ54is" resname="page.adminReturnButton">
+        <source>page.adminReturnButton</source>
+        <target>Retourner à la liste</target>
+      </trans-unit>
+      <trans-unit id="ORHbjB8" resname="page.serieAdminTitle">
+        <source>page.serieAdminTitle</source>
+        <target>Liste des séries</target>
+      </trans-unit>
+      <trans-unit id="EOO6R5p" resname="word.summary">
+        <source>word.summary</source>
+        <target>Résumé</target>
+      </trans-unit>
+      <trans-unit id="j93pT.p" resname="word.poster">
+        <source>word.poster</source>
+        <target>Affiche</target>
+      </trans-unit>
+      <trans-unit id="4cDFQ.1" resname="word.actor">
+        <source>word.actor</source>
+        <target>Acteur(s)</target>
+      </trans-unit>
+      <trans-unit id="lecV.Hm" resname="page.serieAdminMessageListActor">
+        <source>page.serieAdminMessageListActor</source>
+        <target>Aucun acteur trouvé</target>
+      </trans-unit>
+      <trans-unit id="9r2iycy" resname="page.serieAdminMessageListSerie">
+        <source>page.serieAdminMessageListSerie</source>
+        <target>Aucune série trouvée</target>
+      </trans-unit>
+      <trans-unit id="zEBSEBy" resname="page.serieAdminCreateButton">
+        <source>page.serieAdminCreateButton</source>
+        <target>Ajouter une nouvelle série</target>
+      </trans-unit>
+      <trans-unit id="9exTtKm" resname="page.serieAdminNew">
+        <source>page.serieAdminNew</source>
+        <target>serie-Admin  | Nouvelle serie</target>
+      </trans-unit>
+      <trans-unit id="MxWHSHq" resname="page.serieAdminNewTitle">
+        <source>page.serieAdminNewTitle</source>
+        <target>Ajouter une nouvelle série</target>
+      </trans-unit>
+      <trans-unit id="n5XTQAn" resname="page.serieAdminShow">
+        <source>page.serieAdminShow</source>
+        <target>serie-Admin | Consulter</target>
+      </trans-unit>
+      <trans-unit id="6j0TXry" resname="page.serieAdminShowTitle">
+        <source>page.serieAdminShowTitle</source>
+        <target>Fiche de la série</target>
+      </trans-unit>
+      <trans-unit id="7wNzuIM" resname="page.serieAdminListActorShow">
+        <source>page.serieAdminListActorShow</source>
+        <target>Fiche d'un acteur</target>
+      </trans-unit>
+      <trans-unit id="NJazxeC" resname="page.serieAdminReturnButton">
+        <source>page.serieAdminReturnButton</source>
+        <target>Retourner à la liste des séries</target>
+      </trans-unit>
+      <trans-unit id="NRjsxWL" resname="word.delete">
+        <source>word.delete</source>
+        <target>Supprimer</target>
+      </trans-unit>
+      <trans-unit id="n6nsTKY" resname="page.adminUpdateButton">
+        <source>page.adminUpdateButton</source>
+        <target>Mettre à jour</target>
+      </trans-unit>
+      <trans-unit id="zUiIIjb" resname="page.adminSaveButton">
+        <source>page.adminSaveButton</source>
+        <target>Sauvegarder</target>
+      </trans-unit>
+      <trans-unit id="hRfXumM" resname="word.category">
+        <source>word.category</source>
+        <target>Catégorie</target>
+      </trans-unit>
+      <trans-unit id="YUuTXTu" resname="page.seasonAdminTitle">
+        <source>page.seasonAdminTitle</source>
+        <target>Liste des saisons</target>
+      </trans-unit>
+      <trans-unit id="CnwgWQT" resname="word.number">
+        <source>word.number</source>
+        <target>Numéro</target>
+      </trans-unit>
+      <trans-unit id="0zvcXVJ" resname="word.year">
+        <source>word.year</source>
+        <target>Année</target>
+      </trans-unit>
+      <trans-unit id="qvedlDB" resname="word.description">
+        <source>word.description</source>
+        <target>Description</target>
+      </trans-unit>
+      <trans-unit id="sXusziG" resname="page.seasonAdminListMessage">
+        <source>page.seasonAdminListMessage</source>
+        <target>Aucune saison disponible</target>
+      </trans-unit>
+      <trans-unit id="t812IXc" resname="page.seasonAdminCreateButton">
+        <source>page.seasonAdminCreateButton</source>
+        <target>Ajouter une nouvelle saison</target>
+      </trans-unit>
+      <trans-unit id="lXk_ih3" resname="page.seasonAdminEdit">
+        <source>page.seasonAdminEdit</source>
+        <target>saison-Admin | Modifier</target>
+      </trans-unit>
+      <trans-unit id="imu7q2i" resname="page.seasonAdminEditTitle">
+        <source>page.seasonAdminEditTitle</source>
+        <target>Modifier une saison</target>
+      </trans-unit>
+      <trans-unit id="miQIXdT" resname="page.seasonAdminNew">
+        <source>page.seasonAdminNew</source>
+        <target>saisonAdmin | New</target>
+      </trans-unit>
+      <trans-unit id="J0dAg3J" resname="page.seasonAdminNewTitle">
+        <source>page.seasonAdminNewTitle</source>
+        <target>Ajouter une saison</target>
+      </trans-unit>
+      <trans-unit id="2Ple_TV" resname="page.seasonAdminShow">
+        <source>page.seasonAdminShow</source>
+        <target>saisonAdmin | Consulter</target>
+      </trans-unit>
+      <trans-unit id="PJ6hvrI" resname="page.seasonAdminShowTitle">
+        <source>page.seasonAdminShowTitle</source>
+        <target>Fiche de la saison</target>
+      </trans-unit>
+      <trans-unit id="PodVjOh" resname="page.episodeAdminTitle">
+        <source>page.episodeAdminTitle</source>
+        <target>Liste des épisodes</target>
+      </trans-unit>
+      <trans-unit id="ixdIZiO" resname="word.synopsis">
+        <source>word.synopsis</source>
+        <target>Synopsis</target>
+      </trans-unit>
+      <trans-unit id="dYUr64w" resname="page.episodeAdminMessageList">
+        <source>page.episodeAdminMessageList</source>
+        <target>Aucun épisode trouvé</target>
+      </trans-unit>
+      <trans-unit id="9hm.Smu" resname="page.episodeAdminCreateButton">
+        <source>page.episodeAdminCreateButton</source>
+        <target>Ajouter un nouvel épisode</target>
+      </trans-unit>
+      <trans-unit id="SOq3oWy" resname="page.episodeAdminShow">
+        <source>page.episodeAdminShow</source>
+        <target>episodeAdmin | Consulter</target>
+      </trans-unit>
+      <trans-unit id="6446lcg" resname="page.episodeAdminShowTitle">
+        <source>page.episodeAdminShowTitle</source>
+        <target>Fiche d'un épisode</target>
+      </trans-unit>
+      <trans-unit id="upMV8Cf" resname="page.episodeAdminEdit">
+        <source>page.episodeAdminEdit</source>
+        <target>episodeAdmin | Modifier</target>
+      </trans-unit>
+      <trans-unit id="hpgOhK5" resname="page.episodeAdminEditTitle">
+        <source>page.episodeAdminEditTitle</source>
+        <target>Modifier un épisode</target>
+      </trans-unit>
+      <trans-unit id="cuxOysP" resname="page.episodeAdminNew">
+        <source>page.episodeAdminNew</source>
+        <target>episodeAdmin | Nouvel</target>
+      </trans-unit>
+      <trans-unit id="vs3J3Zb" resname="page.episodeAdminNewTitle">
+        <source>page.episodeAdminNewTitle</source>
+        <target>Ajouter un nouvel épisode</target>
+      </trans-unit>
+      <trans-unit id="HZHZMXG" resname="page.categoryAdminTitle">
+        <source>page.categoryAdminTitle</source>
+        <target>Liste des catégories</target>
+      </trans-unit>
+      <trans-unit id="0tDcAng" resname="page.categoryAdminCreateButton">
+        <source>page.categoryAdminCreateButton</source>
+        <target>Creation d'une nouvelle catégorie</target>
+      </trans-unit>
+      <trans-unit id="kGLBAsT" resname="page.categoryAdminNew">
+        <source>page.categoryAdminNew</source>
+        <target>categorieAdmin | Nouvelle</target>
+      </trans-unit>
+      <trans-unit id="91wYD5p" resname="page.categoryAdminNewTitle">
+        <source>page.categoryAdminNewTitle</source>
+        <target>Ajout d'une nouvelle catégorie</target>
+      </trans-unit>
+      <trans-unit id="dWQqicR" resname="page.actorAdminMessageList">
+        <source>page.actorAdminMessageList</source>
+        <target>Aucun acteur trouvé</target>
+      </trans-unit>
+      <trans-unit id="q_Z61K8" resname="page.actorAdminEdit">
+        <source>page.actorAdminEdit</source>
+        <target>actorAdmin | Modifier</target>
+      </trans-unit>
+      <trans-unit id="KCDzp_v" resname="page.actorAdminEditTitle">
+        <source>page.actorAdminEditTitle</source>
+        <target>Modifier un acteur</target>
+      </trans-unit>
+      <trans-unit id="Rboc9Ww" resname="page.actorAdminNew">
+        <source>page.actorAdminNew</source>
+        <target>acteurAdmin | Nouveau</target>
+      </trans-unit>
+      <trans-unit id="dy8siIL" resname="page.actorAdminNewTitle">
+        <source>page.actorAdminNewTitle</source>
+        <target>Ajouter un nouvel acteur</target>
+      </trans-unit>
+      <trans-unit id="OBkTtBq" resname="page.actorAdminShow">
+        <source>page.actorAdminShow</source>
+        <target>acteurAdmin | Consulter</target>
+      </trans-unit>
+      <trans-unit id="9EQ3NJb" resname="page.actorAdminShowTitle">
+        <source>page.actorAdminShowTitle</source>
+        <target>Fiche d'un acteur</target>
+      </trans-unit>
+      <trans-unit id="0e0PWaN" resname="word.email">
+        <source>word.email</source>
+        <target>email</target>
+      </trans-unit>
+      <trans-unit id="DHHWsIK" resname="page.profileFavorisSerie">
+        <source>page.profileFavorisSerie</source>
+        <target>Vos séries préférées</target>
+      </trans-unit>
+      <trans-unit id="mRJJasS" resname="page.profileFarisSerieMessage">
+        <source>page.profileFarisSerieMessage</source>
+        <target>Aucune série trouvée</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

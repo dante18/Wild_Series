@@ -7,29 +7,48 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="{{ path('app_index') }}">Accueil</a>
+            <a class="nav-item nav-link active" href="{{ path('app_index') }}">{{ 'page.home'|trans }}</a>
             {% if is_granted('ROLE_ADMIN') %}
-                <a class="nav-item nav-link" href="{{ path('program_index') }}">Séries-admin</a>
-                <a class="nav-item nav-link" href="{{ path('season_index') }}">Saisons-admin</a>
-                <a class="nav-item nav-link" href="{{ path('episode_index') }}">Episodes-admin</a>
-                <a class="nav-item nav-link" href="{{ path('category_index') }}">Catégories-admin</a>
-                <a class="nav-item nav-link" href="{{ path('actor_index') }}">Acteurs-admin</a>
+                <a class="nav-item nav-link" href="{{ path('program_index') }}">{{ 'page.serieAdmin'|trans }}</a>
+                <a class="nav-item nav-link" href="{{ path('season_index') }}">{{ 'page.seasonAdmin'|trans }}</a>
+                <a class="nav-item nav-link" href="{{ path('episode_index') }}">{{ 'page.episodeAdmin'|trans }}</a>
+                <a class="nav-item nav-link" href="{{ path('category_index') }}">{{ 'page.categoryAdmin'|trans }}</a>
+                <a class="nav-item nav-link" href="{{ path('actor_index') }}">{{ 'page.actorAdmin'|trans }}</a>
             {% else %}
-                <a class="nav-item nav-link" href="{{ path('wild_index') }}">Séries</a>
+                <a class="nav-item nav-link" href="{{ path('wild_index') }}">{{ 'page.serie'|trans }}</a>
             {% endif %}
             {% if app.user %}
-                <a href="{{ path('app_profile') }}" class="nav-item nav-link"><h6>Mon compte</h6></a>
+                {% trans with {'%username%': app.user.email} %}
+                    hello_username
+                {% endtrans %} !
+                <a href="{{ path('app_profile') }}" class="nav-item nav-link"><h6>{{ 'page.profile'|trans }}</h6></a>
                 <a href="{{ path('app_logout') }}" class="nav-item nav-link">
-                    <h6>Se déconnecter</h6>
+                    <h6>{{ 'account.logout'|trans }}</h6>
                 </a>
             {% else %}
                 <a href="{{ path('app_register') }}" class="nav-item nav-link">
-                    <h6>S'inscrire</h6>
+                    <h6>{{ 'account.register'|trans }}</h6>
                 </a>
                 <a href="{{ path('app_login') }}" class="nav-item nav-link">
-                    <h6>Se connecter</h6>
+                    <h6>{{ 'account.login'|trans }}</h6>
                 </a>
             {% endif %}
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{ 'language.selected'|trans }}
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="/fr/">
+                        <span class="flag-icon flag-icon-fr pr-2"></span> {{ 'language.fr'|trans }}
+                    </a>
+                    <a class="dropdown-item" href="/en/">
+                        <span class="flag-icon flag-icon-gb pr-2"></span> {{ 'language.en'|trans }}
+                    </a>
+                    <a class="dropdown-item" href="/es/">
+                        <span class="flag-icon flag-icon-es pr-2"></span> {{ 'language.es'|trans }}
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </nav>
