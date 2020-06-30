@@ -49,6 +49,16 @@
                     </a>
                 </div>
             </div>
+            <div class="dropdown pl-2">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{ 'word.category'|trans }}
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                    {{ render(controller(
+                        'App\\Controller\\CategoryController::categoryList'
+                    )) }}
+                </div>
+            </div>
         </div>
     </div>
 </nav>
