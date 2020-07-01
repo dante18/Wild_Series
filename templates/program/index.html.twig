@@ -9,9 +9,9 @@
         <thead>
             <tr>
                 <th>Id</th>
+                <th>{{ 'word.poster'|trans }}</th>
                 <th>{{ 'word.title'|trans }}</th>
                 <th>{{ 'word.summary'|trans }}</th>
-                <th>{{ 'word.poster'|trans }}</th>
                 <th>{{ 'word.actor'|trans }}</th>
                 <th>{{ 'word.actions'|trans }}</th>
             </tr>
@@ -20,9 +20,9 @@
         {% for program in programs %}
             <tr>
                 <td>{{ program.id }}</td>
+                <td><img src="{{ program.poster is not empty ? vich_uploader_asset (program, 'posterFile', 'App\\Entity\\Program') : asset('build/img/default_poster.jpeg')}}" class="img-fluid"></td>
                 <td>{{ program.title }}</td>
                 <td>{{ program.summary }}</td>
-                <td>{{ program.poster }}</td>
                 <td>
                     {% for actor in program.actors %}
                         {{ actor.name }},
