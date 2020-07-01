@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\ProgramRepository;
+use DateTime;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -11,6 +12,7 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass=ProgramRepository::class)
+ * @Vich\Uploadable
  */
 class Program
 {
@@ -62,6 +64,12 @@ class Program
      * @ORM\Column(type="string", length=255)
      */
     private $slug;
+
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     * @var DateTime
+     */
+    private $updatedAt;
 
     public function __construct()
     {
@@ -193,14 +201,29 @@ class Program
         return $this;
     }
 
-    public function setPosterFile(File $image = null):Program
+    public function setPosterFile(File $image = null): self
     {
         $this->posterFile = $image;
+        if ($image) {
+            $this->updatedAt = new DateTime('now');
+        }
         return $this;
     }
 
     public function getPosterFile(): ?File
     {
         return $this->posterFile;
+    }
+
+    public function getUpdatedAt(): ?\DateTimeInterface
+    {
+        return $this->updatedAt;
+    }
+
+    public function setUpdatedAt(\DateTimeInterface $updatedAt): self
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
     }
 }
