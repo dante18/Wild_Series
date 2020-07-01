@@ -19,7 +19,7 @@
         {% for actor in actors %}
             <tr>
                 <td>{{ actor.id }}</td>
-                <td><img src="{{ actor.picture is not empty ? vich_uploader_asset (actor, 'posterFile', 'App\\Entity\\Actor') : asset('build/img/default_profile.png')}}" class="img-fluid"></td>
+                <td><img src="{{ actor.picture is not empty ? vich_uploader_asset (actor, 'pictureFile', 'App\\Entity\\Actor') : asset('build/img/default_profile.png')}}" class="img-fluid"></td>
                 <td>{{ actor.name }}</td>
                 <td>{{ actor.slug }}</td>
                 <td>
