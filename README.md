@@ -42,3 +42,6 @@
 
 ## Quetes 26
 [Regarder la vidéo](https://www.loom.com/share/6d2cb96bc75d44d29d07a0fb0c3fac7b)
+
+## Quetes 27
+[Regarder la vidéo](https://www.loom.com/share/64847ec8132e40e88f0d9118cd7bcee8)
